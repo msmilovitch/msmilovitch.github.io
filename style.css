@@ -1,0 +1,43 @@
+.aButton {
+    position:absolute;
+    top: 38%;
+    left: 10%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 83px;
+    text-align: center;
+    opacity: 0.6;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+}
+
+.bButton {
+    position:absolute;
+    top: 38%;
+    right: 10%;
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    opacity: 0.6;
+    transition: 0.3s;
+    padding: 5px 83px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+}
+
+.bButton:hover {opacity: 1}
+
+.aButton:hover {opacity: 1}
+
+.centerVideo{
+    
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+        
+}
