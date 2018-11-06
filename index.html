@@ -1,163 +1,25 @@
-<!DOCTYPE html> 
-<html> 
-<head>
-
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>    
-<body> 
-
-<!-- the HTML video source --> 
-    
-<div id="videowrap">
-    <video controls class="centerVideo" id="myVideo" width=100% heigh=100%; >
-  <source id="vidsrc" src="videos/chicken.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | BirdQuest_Interactibles_Prototype</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/webGL_afterlife.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">BirdQuest_Interactibles_Prototype</div>
+      </div>
     </div>
-<br>
-
-<!-- a div for the button so we can only make it show up once video ends --> 
-
-<div id="hidden_buttons" style="text-align: center">
-    <button onclick="aChoice()" class="aButton">Choice A</button>
-    <button onclick="bChoice()" class="bButton">Choice B</button>
-</div>
-    
-<br>
-    
-<!-- javascript to handle video swapping and button display -->
-
-<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
-
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyB4OJtNItNBGyCX85QDTHdV9nqxGSSiksE",
-    authDomain: "citizen-votes.firebaseapp.com",
-    databaseURL: "https://citizen-votes.firebaseio.com",
-    projectId: "citizen-votes",
-    storageBucket: "citizen-votes.appspot.com",
-    messagingSenderId: "798528062259"
-  };
-    
-  firebase.initializeApp(config);
-
-//    //grab storage
-//    var storage = firebase.storage(); 
-//    
-//    //a generic reference
-//    var storageRef = storage.ref();
-//    
-//    //a reference to a folder in storage 
-//    var videoFolder = storageRef.child('videos'); //reference 
-//
-//    //a reference to a specific video
-//    var videoRef = storageRef.child('videos/choice1A.mp4');
-//
-//    //reference to database
-//    var database = firebase.database();
-    
-    
-    
-    
-    //increment a value in the DB
-    function incrementA(){
-        
-        //root object
-        var firebaseReference = firebase.database().ref();
-        
-        var aCount = firebaseReference.child(choiceNumber + "/A");
-        
-        aCount.once("value", gotDataA, errData); 
-
-    }
-    
-    function incrementB(){
-        
-        //root object
-        var firebaseReference = firebase.database().ref();
-        
-        var bCount = firebaseReference.child(choiceNumber + "/B");
-        
-        bCount.once("value", gotDataB, errData); 
-        
-    }
-    
-    function gotDataA(data){
-        console.log(data.val());
-        var currentClicks = data.val();
-        var newClicks = currentClicks + 1;
-        firebase.database().ref().child(choiceNumber+"/A").set(newClicks);
-        choiceNumber+=1;
-    }
-    
-    function gotDataB(data){
-        console.log(data.val());
-        var currentClicks = data.val();
-        var newClicks = currentClicks + 1;
-        firebase.database().ref().child(choiceNumber+"/B").set(newClicks);
-        choiceNumber+=1;
-    }
-    
-    function errData(err){
-        console.log("Error");
-        console.log(err);
-    }
-    
-    var choiceNumber = 1;
-    
-    //immediately turn off button div
-    hideButtons();
-    
-    //grab the video from the HTML
-    var vid = document.getElementById("myVideo");
-    
-    //automatically run this code when video ends -> display button 
-    vid.onended = function(){
-    document.getElementById("hidden_buttons").style.display = "block";
-}; 
-    
-    //function for an a choice
-    function aChoice(){
-        
-        //replace this if statement with a reference to a string array with paths and have the index correspond to the choice number
-        
-        if (choiceNumber == 1){  
-            vid.src = "videos/choice1A.mp4";
-        }
-        
-        else if (choiceNumber == 2){  
-            vid.src = "videos/choice2A.mp4";
-        }
-        
-        incrementA(); //increment number on database 
-        vid.load();
-        hideButtons();
-    }
-    
-    //function for a b choice
-    function bChoice (){
-        if (choiceNumber == 1){ 
-            vid.src = "videos/choice1B.mp4";
-        }
-        else if (choiceNumber == 2){
-            vid.src = "videos/choice2B.mp4";
-        }
-        
-        incrementB(); //increment number on database 
-        vid.load();
-        hideButtons();
-    }
-    
-    //function to hide buttons 
-    function hideButtons(){
-        document.getElementById("hidden_buttons").style.display = "none";
-    }
-    
-</script>  
-       
-    
-
-    
-</body> 
+  </body>
 </html>
