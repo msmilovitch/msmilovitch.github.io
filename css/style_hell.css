@@ -1,0 +1,341 @@
+#pausebutton{
+    position: sticky;
+    bottom: 10px;
+}
+
+#audiobutton{
+    position:sticky;
+    bottom: 10px;
+    left: 10px;
+}
+
+.containter {
+    position: relative;
+}
+
+
+.image_1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.image_2 {
+  position: absolute;
+  top: 30px;
+  left: 330px;
+}
+
+.image_3 {
+  position: absolute;
+  top: 250px;
+  left: 220px;
+}
+
+.image_4 {
+  position: absolute;
+  top: 150px;
+  left: 500px;
+}
+
+.image_5 {
+  position: absolute;
+  top: 2000px;
+  left: 900px;
+}
+
+.image_6 {
+  position: absolute;
+  top: 500px;
+  left: 500px;
+}
+
+.image_7 {
+  position: absolute;
+  top: 80px;
+  left: 1000px;
+}
+
+.image_8 {
+  position: absolute;
+  top: 400px;
+  left: 100px;
+}
+
+.image_9 {
+  position: absolute;
+  top: 300px;
+  left: 500px;
+}
+
+.image_10 {
+  position: absolute;
+  top: 500px;
+  left: 1000px;
+}
+
+.image_11 {
+  position: absolute;
+  top: 300px;
+  left: 800px;
+}
+
+.image_12 {
+  position: absolute;
+  top: 50px;
+  left: 750px;
+}
+
+.image_13 {
+  position: absolute;
+  top: 820px;
+  left: 55px;
+}
+
+.image_14 {
+  position: absolute;
+  top: 1080px;
+  left: 500px;
+}
+
+.image_15 {
+  position: absolute;
+  top: 700px;
+  left: 340px;
+}
+
+.image_16 {
+  position: absolute;
+  top: 650px;
+  left: 750px;
+}
+
+.image_17 {
+  position: absolute;
+  top: 1100px;
+  left: 100px;
+}
+
+.image_18 {
+  position: absolute;
+  top: 1350px;
+  left: 300px;
+}
+
+.image_19 {
+  position: absolute;
+  top: 840px;
+  left: 500px;
+}
+
+.image_20 {
+  position: absolute;
+  top: 1000px;
+  left: 800px;
+}
+
+
+.image_21 {
+  position: absolute;
+  top: 1400px;
+  left: 300px;
+}
+
+.image_22 {
+  position: absolute;
+  top: 1650px;
+  left: 750px;
+}
+
+.image_23 {
+  position: absolute;
+  top: 1820px;
+  left: 55px;
+}
+
+.image_24 {
+  position: absolute;
+  top: 2080px;
+  left: 500px;
+}
+
+.image_25 {
+  position: absolute;
+  top: 2300px;
+  left: 340px;
+}
+
+.image_26 {
+  position: absolute;
+  top: 2650px;
+  left: 750px;
+}
+
+.image_27 {
+  position: absolute;
+  top: 2800px;
+  left: 100px;
+}
+
+.image_28 {
+  position: absolute;
+  top: 2310px;
+  left: 770px;
+}
+
+.image_29 {
+  position: absolute;
+  top: 1950px;
+  left: 300px;
+}
+
+.image_30 {
+  position: absolute;
+  top: 2440px;
+  left: 100px;
+}
+
+.image_31 {
+  position: absolute;
+  top: 2500px;
+  left: 500px;
+}
+
+.image_32 {
+  position: absolute;
+  top: 2850px;
+  left: 350px;
+}
+
+.image_33 {
+  position: absolute;
+  top: 2200px;
+  left: 175px;
+}
+
+.image_34 {
+  position: absolute;
+  top: 1780px;
+  left: 600px;
+}
+
+.image_35 {
+  position: absolute;
+  top: 1700px;
+  left: 370px;
+}
+
+.image_36 {
+  position: absolute;
+  top: 1250px;
+  left: 750px;
+}
+
+.image_37 {
+  position: absolute;
+  top: 1500px;
+  left: 100px;
+}
+
+.image_38 {
+  position: absolute;
+  top: 3100px;
+  left: 300px;
+}
+
+.image_39 {
+  position: absolute;
+  top: 3250px;
+  left: 150px;
+}
+
+.image_40 {
+  position: absolute;
+  top: 3200px;
+  left: 575px;
+}
+
+.image_41 {
+  position: absolute;
+  top: 3400px;
+  left: 400px;
+}
+
+.image_42 {
+  position: absolute;
+  top: 3500px;
+  left: 670px;
+}
+
+.image_43 {
+  position: absolute;
+  top: 3750px;
+  left: 250px;
+}
+
+.image_44 {
+  position: absolute;
+  top: 3850px;
+  left: 700px;
+}
+
+.image_45 {
+  position: absolute;
+  top: 4200px;
+  left: 200px;
+}
+
+.image_46 {
+  position: absolute;
+  top: 4250px;
+  left: 650px;
+}
+
+.image_47 {
+  position: absolute;
+  top: 4500px;
+  left: 400px;
+}
+
+.image_48 {
+  position: absolute;
+  top: 4700px;
+  left: 200px;
+}
+
+.image_49 {
+  position: absolute;
+  top: 4950px;
+  left: 650px;
+}
+
+.image_50 {
+  position: absolute;
+  top: 4900px;
+  left: 375px;
+}
+
+.image_51 {
+  position: absolute;
+  top: 4780px;
+  left: 900px;
+}
+
+.image_52 {
+  position: absolute;
+  top: 4600px;
+  left: 670px;
+}
+
+.image_53 {
+  position: absolute;
+  top: 1150px;
+  left: 1050px;
+}
+
+.image_54 {
+  position: absolute;
+  top: 4250px;
+  left: 950px;
+}
+

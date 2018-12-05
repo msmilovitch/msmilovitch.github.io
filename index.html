@@ -1,25 +1,105 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | BirdQuest_Interactibles_Prototype</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>  
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/webGL_afterlife.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">BirdQuest_Interactibles_Prototype</div>
-      </div>
-    </div>
-  </body>
+<!doctype html>
+<html>
+<head>
+<title>The Afterlife</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML">
+	<meta name="description" content="The Afterlife">
+	<meta name="author" content="Natalie Saindon, Revathi Gopalakrishnan, Michael Smilovitch, Andres Arteaga">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700|Roboto:500" rel="stylesheet">
+</head>
+	
+<body>
+	<div class="homepage-container">
+		<div class="homepage-text">
+			<h1>Welcome To The Afterlife</h1>
+			<h2>Have you been...</h2>
+		</div>
+		<div class="slider-container">
+     	 	<label for="slider" class="label-text">Bad</label>
+      		<label for="slider" class="label-text" id="pull-right">Good</label>
+			<input type="range" min="-255" max="255" step="1" value="0" class="slider" id="rangeHeavenHell" >
+			<input id="btn" type="button" value="Go">
+		</div>
+	</div>
+	
+	<script>
+	//Button for Slider - Redirect user to the appropriate page in The Afterlife based on the slider's value.
+		var slider = document.getElementById("rangeHeavenHell");
+	
+		btn.addEventListener("click", redirectPage);
+		
+		function redirectPage(){
+			if(slider.value<-20){
+				window.location.href = 'hell.html';				
+			}
+			else if(slider.value>20){
+				window.location.href = 'heaven.html';
+			}
+			else{
+				alert("You're in purgatory");
+			}
+		}
+
+	//Change the homepage's background colour based on the slider's value.
+		rangeHeavenHell.addEventListener('input', changeBackground);
+		
+		function changeBackground(){
+			// Variables defined to get the decimal values from the slider. 
+			var hell = 255+parseInt(slider.value); //Add 255 to slider value to bring minimum range value to back 0. RGB values can't be negative.
+			var heaven = parseInt(slider.value);
+									
+			// Variables to convert the decimal values into hexadecimal (hex base 16).
+			var hellHex = (hell < 16) ? "0" + hell.toString(16) : hell.toString(16); //Logical test - if true, add 0 to make double digit hex value; if false, leave as is.
+			var heavenHex = (heaven < 16) ? "0" + heaven.toString(16) : heaven.toString(16);
+						
+			// Variable to concatenate the above into a complete hex code.
+			var hexCodeHell = "#" + "ff" + hellHex + "00"; //R = 255, G = Varies based on slider value, B = 0
+			var hexCodeHeaven = "#" + heavenHex + "00" + "ff"; //R = Varies based on slider value, G = 0, B = 255
+			var hexCodePurgatory = "#" + "ff" + "ff" + "ff"; //R = 255, G = 255, B = 255
+			
+			if(slider.value<-20){
+				document.body.style.backgroundColor = hexCodeHell;
+			}
+			else if(slider.value>20){
+				document.body.style.backgroundColor = hexCodeHeaven;
+			}
+			else{
+				document.body.style.backgroundColor = hexCodePurgatory;
+			}
+		}
+		
+	//Change the slider's handle image based on slider's value.
+		slider.addEventListener('input',onChange);
+		
+		function onChange(event){
+			var x = event.target.value;
+			if(x >= -255 && x < -180){
+				slider.className = "Hell-1";
+			}
+			else if(x >= -180 && x < -100){			
+				slider.className = "Hell-2";
+			}
+			else if(x >= -100 && x < -20){
+				slider.className = "Hell-3";
+			}
+			else if(x >= 20 && x < 100){
+				slider.className = "Heaven-4";
+			}
+			else if(x >= 100 && x < 180){
+				slider.className = "Heaven-5";
+			}
+			else if(x >= 180 && x <= 255){
+				slider.className = "Heaven-6";
+			}
+			else{
+				slider.className = "";
+			}
+		}
+	</script>
+</body>
 </html>
+

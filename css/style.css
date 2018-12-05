@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*TABLE OF CONTENTS
+
+1. General Styles
+2. Typography
+3. Slider
+4. Homepage
+5. Buttons
+*/
+
+
+/* 1. General Styles */
+body,html{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+/* 2. Typography */
+h1{
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: 4em;
+	color: #808080;
+	font-weight: 700;
+	text-align: center;
+}
+
+h2{
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #808080;
+	font-weight: 500;
+	text-align: center;
+}
+
+.label-text{
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #808080;
+	font-weight: 500;
+	padding-bottom: 2px;
+}
+
+#pull-right{
+	float: right;
+}
+
+/* 3. Slider */
+.slider-container{
+	width: 75%;
+	margin: auto;
+}
+
+input[type="range"]{
+	-webkit-appearance: none;
+	appearance: none;
+	border-radius: 5px;
+	width: 100%;
+	height: 5px;
+	background: #808080;
+	outline: none;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	appearance: none;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	border-radius: 50%;
+	background-image:url("../img/gate.png");
+	background-position: center center;
+  	background-repeat: no-repeat;
+}
+
+input[type="range"].Hell-1::-webkit-slider-thumb{
+	background-image:url("../img/devil.png");
+}
+
+input[type="range"].Hell-2::-webkit-slider-thumb{
+	background-image:url("../img/trident.png");
+}
+
+input[type="range"].Hell-3::-webkit-slider-thumb{
+	background-image:url("../img/burn.png");
+}
+
+input[type="range"].Heaven-4::-webkit-slider-thumb{
+	background-image:url("../img/cloud.png");
+}
+
+input[type="range"].Heaven-5::-webkit-slider-thumb{
+	background-image:url("../img/dove.png");
+}
+
+input[type="range"].Heaven-6::-webkit-slider-thumb{
+	background-image:url("../img/angel.png");
+}
+/* 4. Homepage*/
+.homepage-text{
+	margin-bottom: 50px;
+}
+
+.homepage-container{
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 5. Buttons*/
+#btn{
+	background-color: transparent;
+	border: 2px solid #808080;
+	border-radius: 4px;
+	color: #808080;
+	cursor: pointer;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	left: 50%;
+	margin-top: 50px;
+	padding: 5px 30px;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	transform: translate(-50%, 0);	
+}
+

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <title>Credits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style_credits.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Roboto" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML">
+</head>
+<body bgcolor="#DCDCDC">
+	
+	<div class="header">
+		<h1>The Creators</h1>
+	</div>
+
+	<div id="firstGifs">
+		<img src="1.gif" width="180px">
+	</div>
+
+	<div id="left">Fairy Image from HellismMedia.org</div>
+
+	<div id="secondGifs">
+		<img src="2.gif" width="180px">
+	</div>
+	
+	<div id="leftTwo">Flying Stuff from Sickly Sweet Inc.</div>
+
+	<div id="thirdGifs">
+		<img src="3.gif" width="180px">
+	</div>
+
+	<div id="leftThree">Strange Placeholder via loremipsum.gov</div>
+
+	<div id="fourthGifs">
+		<img src="4.gif" width="180px">
+	</div>
+
+	<div id="right">Weird Animation by Animations Forever</div>
+
+	<div id="fifthGifs">
+		<img src="5.gif" width="180px">
+	</div>
+
+	<div id="rightTwo">Spooky Skeleton from Spook.ca</div>
+
+	<div id="sixthGifs">
+		<img src="6.gif" width="180px">
+	</div>
+
+	<div id="rightThree">Blue Blob by Animations Forever</div>
+
+	
+	<input id="button1" type="button" value="Try Again">
+
+	<div id="icons">
+	
+	<a href="#" class="fa fa-facebook" id="one"></a>
+	<a href="#" class="fa fa-instagram" id="two"></a>
+	<a href="#" class="fa fa-twitter" id="three"></a>
+
+	</div>
+
+	<script>
+		var tryAgain=document.querySelector("#button1");
+		var first=document.querySelector("#one");
+		var second=document.querySelector("#two");
+		var third=document.querySelector("#three");
+
+		tryAgain.addEventListener("click", clickButton);
+		first.addEventListener("click", social);
+		second.addEventListener("click", social);
+		third.addEventListener("click", social);
+
+		function clickButton(){
+			location.assign("index.html");
+		}
+
+		function social(){
+			if (this.id=="one"){
+       		alert("Share The Afterlife experience on Facebook?");     		
+
+       	}
+       	else if (this.id=="two"){
+       		
+       		alert("Share The Afterlife experience on Instagram?");   
+       	}
+       	else {
+       		alert("Share The Afterlife experience on Twitter?");   
+       		
+       	}
+       	
+       }
+
+
+     
+
+
+	
+
+
+
+</script>
+</body>
+</html>
